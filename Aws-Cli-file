@@ -79,12 +79,7 @@ Extend the volume in AWS root volume
 lsblk
 sudo growpart /dev/xvda 1
 
-
-
-
-
-
-
+---------------------------------------------------------------------------------------------------------
 1  cat /etc/*release*
     2  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
     3  unzip awscliv2.zip
@@ -100,6 +95,7 @@ sudo growpart /dev/xvda 1
    13  aws ec2 describe-instances
 
    16  aws ec2 describe-instances --query "Reservations[*].Instances[*].[InstanceId]"
+       aws ec2 describe-instances --query "Reservations[*].Instances[*].[InstanceId]" --output text
    17  aws ec2 describe-instances --query "Reservations[*].Instances[*].[ImageId]"
    18  aws ec2 describe-instances --query "Reservations[*].Instances[*].[ImageId]" --output text
    19  aws ec2 describe-instances --query "Reservations[*].Instances[*].[ImageId].{PublicIP:PublicIpAddress" --output text
