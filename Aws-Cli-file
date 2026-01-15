@@ -125,7 +125,6 @@ image_id=$(aws ec2 create-image --instance-id $instance_id --name "My server" --
 
 step 4: use that image to launch an instance
 aws ec2 run-instances --image-id $image_id --instance-type t2.micro --key-name MyKeyPair1   --query 'Instances[*].[InstanceId]' --output text 
-i-03c84ceb5391371b6
 
 
 
