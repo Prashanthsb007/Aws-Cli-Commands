@@ -116,7 +116,7 @@ Demo-----Demo---Demo
 Step1: Launch an EC2 Instance and save the instance ID into an environment variable
 
 instance_id=$(aws ec2 run-instances --image-id ami-55ef662f --instance-type t2.micro --key-name MyKeyPair1 --user-data file://userdata.txt  --query 'Instances[*].[InstanceId]' --output text )
-
+use this - "instance_id=$(aws ec2 run-instances --image-id ami-0ec10929233384c7f --instance-type t2.micro --key-name test --user-data file://userdata.txt --query 'Instances[*].[InstanceId]' --output text )"
 
 Step 2: Check the user data worked and the web server is running by typing the web server IP on a browser and verifying you see ÒHello WorldÓ
 
