@@ -100,6 +100,7 @@ sudo growpart /dev/xvda 1
    18  aws ec2 describe-instances --query "Reservations[*].Instances[*].[ImageId]" --output text
    19  aws ec2 describe-instances --query "Reservations[*].Instances[*].[ImageId].{PublicIP:PublicIpAddress}" --output text
    20  aws ec2 describe-instances --query "Reservations[*].Instances[*].[ImageId].{PublicIP:PublicIpAddress}" --output text
+------>aws ec2 describe-instances --query "Reservations[*].Instances[*].PublicIpAddress" --output text
    21  aws ec2 describe-instances --query "Reservations[*].Instances[*].{PublicIP:PublicIpAddress}" --output text
    22  aws ec2 describe-instances --query "Reservations[*].Instances[*].{PublicIP:PublicIpAddress,status}" --output text
    23  aws ec2 describe-instances --query "Reservations[*].Instances[*].{PublicIP:PublicIpAddress,status:status.name}" --output text
